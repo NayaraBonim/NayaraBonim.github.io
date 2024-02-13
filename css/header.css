@@ -1,0 +1,36 @@
+.header {
+  max-width: 1200px; /*largura máxima do site*/
+  padding: 40px 20px; /*para desgrudar os elementos dos cantos*/
+  margin: 0 auto; /*pro site ficar alinhado quando atingir sua largura máxima*/
+  display: flex; /*um item ao lado do outro*/
+  justify-content: space-between; /*para espaçar os itens */
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap; /*quebrar linha caso a página fique pequena*/
+  gap: 10px; /*espaçamento entre os itens*/
+  justify-content: center; /*importante principalmente no responsivo pois ao quebrar os elementos em uma coluna deixa alinhado ao centro*/
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  padding: 10px 20px; /*em links é bom aumentar a área de click com padding*/
+  text-decoration: none;
+  color: #141414;
+  display: block; /*senão não vai pegar corretamente os valores do padding*/
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column; /*na hora de quebrar transforma em coluna os itens*/
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+}
